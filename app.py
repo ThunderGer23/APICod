@@ -8,7 +8,7 @@ ping(env['TOKEN'], 'Servidor de código corriendo')
 app = FastAPI(
     title= "Someone title :v/ vrgs",
     description= "Someone description :v/ prrna",
-    version= env['VERSION'],
+    version= "1.1.0",
     contact= {
         "name": "Ajá :eyes",
         "url" : "http://",
