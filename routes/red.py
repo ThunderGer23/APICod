@@ -9,7 +9,7 @@ red = APIRouter()
 
 @red.get('/test')
 def getText(red: Red):
-    ping(env['TOKERN'], 'Iniciando analisis de código')
+    ping(env['TOKEN'], 'Iniciando analisis de código')
     analisis = model.predict(red.code)
-    ping(env['TOKERN'], 'Interpretación lista')
+    ping(env['TOKEN'], 'Interpretación lista')
     return interprete(analisis)
