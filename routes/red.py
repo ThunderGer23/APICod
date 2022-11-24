@@ -7,8 +7,8 @@ from notigram import ping
 
 red = APIRouter()
 
-@red.get('/test')
-def getText(red: Red):
+@red.post('/test', response_model= list[str], tags=["Cod"])
+def postText(red: Red):
     ping(env['TOKEN'], 'Iniciando analisis de código')
     analisis = model.predict(red.code)
     ping(env['TOKEN'], 'Interpretación lista')
