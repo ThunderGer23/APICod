@@ -1,0 +1,11 @@
+version: "3.9.6"
+services:
+  apicode:
+    build: ./
+    environment:
+      - LC_ALL=C.UTF-8
+      - LANG=C.UTF-8
+      - VERSION= 1.0.1
+      - TOKEN= daa39d53-6283-47a1-b945-b7ee6528dde0
+    ports:
+      - "8000:8000"
