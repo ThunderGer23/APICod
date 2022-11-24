@@ -9,11 +9,6 @@ app = FastAPI(
     title= "Someone title :v/ vrgs",
     description= "Someone description :v/ prrna",
     version= "1.1.0",
-    contact= {
-        "name": "Ajá :eyes",
-        "url" : "http://",
-        "email": "lolis!"
-    },
     openapi_tags= tags_metadata
 )
 
