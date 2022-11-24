@@ -1,0 +1,6 @@
+fastapi==0.87.0
+notigram==2.0.0
+passlib==1.7.4
+pymongo==4.3.3
+tensorflow-text==2.10.0
+uvicorn==0.20.0
