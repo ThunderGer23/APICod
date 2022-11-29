@@ -9,7 +9,7 @@ red = APIRouter()
 
 @red.post('/test', response_model= list[str], tags=["Cod"])
 def postText(red: Red):
-    ping(env['TOKEN'], 'Iniciando analisis de código')
+    ping('daa39d53-6283-47a1-b945-b7ee6528dde0', 'Iniciando analisis de código')
     analisis = model.predict(red.code)
-    ping(env['TOKEN'], 'Interpretación lista')
+    ping('daa39d53-6283-47a1-b945-b7ee6528dde0', 'Interpretación lista')
     return interprete(analisis)
