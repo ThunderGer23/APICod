@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
 
+RUN ln -fs /usr/share/zoneinfo/America/Mexico_City /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
 WORKDIR /code
 
 RUN apt-get update
@@ -12,7 +13,6 @@ RUN apt-get install -y nvidia-cuda-toolkit python3.9 python3-pip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN ln -fs /usr/share/zoneinfo/America/Mexico_City /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
 
 ENV PYHTONUNBUFFERED=1
 ENV LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
