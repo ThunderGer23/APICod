@@ -10,9 +10,7 @@ RUN apt-get install -y gnupg2 curl
 RUN curl -fsSL https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub | apt-key add -
 
 # Instalar bibliotecas de CUDA y otros paquetes necesarios
-RUN apt-get install -y nvidia-cuda-toolkit python3.9 python3-pip && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y nvidia-cuda-toolkit python3.9 python3-pip
 
 
 ENV PYHTONUNBUFFERED=1
