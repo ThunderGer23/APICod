@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 
-RUN ln -fs /usr/share/zoneinfo/America/Mexico_City /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
+
+RUN ln -sf /usr/share/zoneinfo/America/Mexico_City /etc/localtime
 WORKDIR /code
 
 RUN apt-get update
