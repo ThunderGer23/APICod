@@ -2,8 +2,8 @@ from fastapi import APIRouter
 from helpers.model import new_model as model
 from helpers.inter import interprete
 from models.red import Red
-from os import environ as env
-from notigram import ping
+# from os import environ as env
+# from notigram import ping
 
 red = APIRouter()
 
