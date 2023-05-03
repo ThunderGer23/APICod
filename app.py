@@ -3,8 +3,9 @@ from routes.red import red
 from docs.docs import tags_metadata
 from os import environ as env
 from notigram import ping
+TOKEN='daa39d53-6283-47a1-b945-b7ee6528dde0'
 
-ping(env['TOKEN'], 'Aquí APICode Lista para bailar')
+ping(TOKEN, 'Aquí APICode Lista para bailar')
 app = FastAPI(
     title= "Someone title :v/ vrgs",
     description= "Someone description :v/ prrna",

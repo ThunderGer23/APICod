@@ -5,11 +5,12 @@ from models.red import Red
 from os import environ as env
 from notigram import ping
 
+TOKEN='daa39d53-6283-47a1-b945-b7ee6528dde0'
 red = APIRouter()
 
 @red.post('/test', response_model= list[str], tags=["Cod"])
 def postText(red: Red):
-    ping(env['TOKEN'], 'Iniciando analisis de código')
+    ping(TOKEN, 'Iniciando analisis de código')
     analisis = model.predict(red.code)
-    ping(env['TOKEN'], 'Interpretación lista')
+    ping(TOKEN, 'Interpretación lista')
     return interprete(analisis)
