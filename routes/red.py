@@ -11,5 +11,5 @@ red = APIRouter()
 def postText(red: Red):
     ping(env['TOKEN'], 'Iniciando analisis de código')
     analisis = model.predict(red.code)
-    ping(env['TOKEN'], 'Interpretación lista')
+    ping(env['TOKEN'], 'Interpretación de código lista')
     return interprete(analisis)
